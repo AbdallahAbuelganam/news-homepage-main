@@ -1,0 +1,211 @@
+/* style-guide */
+
+/* 
+    CP: color-primary
+    CN: color-neutral
+*/
+:root {
+    --cp-soft-orange: hsl(35, 77%, 62%);
+    --cp-soft-red: hsl(5, 85%, 63%);
+    --cn-off-white: hsl(36, 100%, 99%);
+    --cn-Grayish-blue: hsl(233, 8%, 79%);
+    --cn-dark-grayish-blue: hsl(236, 13%, 42%);
+    --cn-Very-dark-grayish-blue: hsl(240, 100%, 5%);
+}
+
+html,
+body {
+    font-size: 15px;
+}
+
+/* page style */
+
+body {
+    background-color: var(--cn-off-white);
+    margin: 16px;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: -66%;
+    height: 100vh;
+    width: 66%;
+    padding-top: 40%;
+    background-color: var(--cn-off-white);
+    display: flex;
+    flex-direction: column;
+}
+
+.nav a {
+    color: var(--cn-dark-grayish-blue);
+    text-decoration: none;
+    margin: 26px 32px 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.close {
+    z-index: 15;
+    position: fixed;
+    right: 16px;
+}
+
+main {
+    text-align: left;
+
+    >* {
+        margin: 0 0 75px;
+    }
+}
+
+.hero img {
+    width: -webkit-fill-available;
+}
+
+.hero h1 {
+    color: var(--cn-Very-dark-grayish-blue);
+    font-size: 41px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.hero p {
+    color: var(--cn-dark-grayish-blue);
+    line-height: 2;
+    margin: 0px;
+}
+
+.hero a {
+    color: var(--cn-Very-dark-grayish-blue);
+    background-color: var(--cp-soft-red);
+    text-decoration: none;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 8px 30px;
+    font-weight: 800;
+    margin-top: 38px;
+}
+
+.news {
+    background-color: var(--cn-Very-dark-grayish-blue);
+    padding: 20px;
+
+    /* is desktop padding also 20px? */
+    .new+.new {
+        border-top: 1px solid var(--cn-Grayish-blue);
+    }
+}
+
+.news h2 {
+    color: var(--cp-soft-orange);
+    font-size: 32px;
+    margin-top: 0;
+}
+
+.new .title {
+    color: var(--cn-off-white);
+    font-weight: 800;
+    font-size: 20px;
+    margin: 26px 0 0;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.new p {
+    color: var(--cn-Grayish-blue);
+    line-height: 2;
+}
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog {
+    margin-bottom: 26px;
+}
+
+.blog img {
+    float: left;
+    aspect-ratio: 100/127;
+    width: 100px;
+    margin-right: 26px;
+}
+
+.blog .num {
+    color: var(--cp-soft-red);
+    margin: 0px;
+    font-size: 32px;
+}
+
+.blog .title {
+    color: var(--cn-Very-dark-grayish-blue);
+    font-weight: 800;
+    font-size: 18px;
+    margin: 8px 0px;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.blog p {
+    color: var(--cn-dark-grayish-blue);
+    line-height: 1.8;
+    margin: 0px;
+}
+
+.attribution {
+    font-size: 10px;
+}
+
+.layer {
+    z-index: 5;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    height: calc(100% + 90px);
+    width: calc(100% + 32px);
+    background-color: hsla(233, 21%, 24%, 0.545);
+}
+
+/* action states */
+
+.nav a:hover {
+    color: var(--cp-soft-red);
+}
+
+.hero a:hover {
+    color: var(--cn-off-white);
+    background-color: var(--cn-Very-dark-grayish-blue);
+    text-decoration: none;
+}
+
+.new .title:hover {
+    color: var(--cp-soft-orange);
+}
+
+.blog .title:hover {
+    color: var(--cp-soft-red);
+}
+
+.hide {
+    display: none;
+}
+
+.open-menu {
+    right: 0;
+}
+
